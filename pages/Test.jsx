@@ -1,8 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
-import Summary from "./Summary";
 import { useNavigate } from "react-router-dom";
+import icon_correct from "../assets/images/icon-correct.svg";
+import icon_wrong from "../assets/images/icon-incorrect.svg";
 
 export default function Test() {
   const { type } = useParams();
@@ -108,11 +109,7 @@ export default function Test() {
               <span>{item}</span>
               {icon && (
                 <img
-                  src={
-                    isCorrect
-                      ? "../assets/images/icon-correct.svg"
-                      : "../assets/images/icon-incorrect.svg"
-                  }
+                  src={isCorrect ? icon_correct : icon_wrong}
                   alt={isCorrect ? "Correct" : "Incorrect"}
                   style={{ width: "25px", height: "25px" }}
                 />
