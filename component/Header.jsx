@@ -6,17 +6,20 @@ import moon_dark from "../assets/images/icon-moon-dark.svg";
 import moon_light from "../assets/images/icon-moon-light.svg";
 import sun_dark from "../assets/images/icon-sun-dark.svg";
 import sun_light from "../assets/images/icon-sun-light.svg";
-import { borderRadius, height } from "@mui/system";
+import html_icon from "../assets/images/icon-html.svg";
+import css_icon from "../assets/images/icon-css.svg";
+import javascript_icon from "../assets/images/icon-js.svg";
+import accessibility_icon from "../assets/images/icon-accessibility.svg";
 
 export default function Header() {
   const { type } = useParams();
   const { theme, toggleTheme } = React.useContext(ThemeContext);
   // 映射 type 到对应的图片资源
   const iconMap = {
-    html: "../assets/images/icon-html.svg",
-    css: "../assets/images/icon-css.svg",
-    javascript: "../assets/images/icon-js.svg",
-    accessibility: "../assets/images/icon-accessibility.svg",
+    html: html_icon,
+    css: css_icon,
+    javascript: javascript_icon,
+    accessibility: accessibility_icon,
   };
 
   const img_bgColor = {
