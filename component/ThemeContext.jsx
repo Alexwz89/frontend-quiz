@@ -17,10 +17,10 @@ export const ThemeProvider = ({ children }) => {
       theme === "light" ? "#313E51" : "#F4F6FA"
     );
     document.body.style.setProperty(
-      "background-image",
+      "--background-image",
       theme === "light"
-        ? `url("../assets/images/pattern-background-desktop-light.svg")`
-        : `url("../assets/images/pattern-background-desktop-dark.svg")`
+        ? `url("/assets/images/pattern-background-desktop-light.svg")`
+        : `url("/assets/images/pattern-background-desktop-dark.svg")`
     );
     document.body.style.setProperty(
       "--btn-background",
