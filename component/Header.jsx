@@ -47,7 +47,7 @@ export default function Header() {
         <span>{type}</span>
       </div>
       <div className="theme_box">
-        <img src={theme === "light" ? moon_dark : moon_light} />
+        <img src={theme === "light" ? sun_dark : sun_light} />
         <ConfigProvider
           theme={{
             token: {
@@ -58,7 +58,7 @@ export default function Header() {
         >
           <Switch onChange={toggleTheme} />
         </ConfigProvider>
-        <img src={theme === "light" ? sun_dark : sun_light} />
+        <img src={theme === "light" ? moon_dark : moon_light} />
       </div>
     </header>
   );
